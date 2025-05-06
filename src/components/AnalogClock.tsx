@@ -32,7 +32,7 @@ const AnalogClock: React.FC = () => {
       <div className={styles.clockLabel}>UTC+5:30 (IST)</div>
       <div className={styles.clock}>
         <div className={styles.clockFace}>
-          {/* Clock numbers */}
+          {/* Clock tick marks instead of numbers */}
           {[...Array(12)].map((_, i) => (
             <div 
               key={i} 
@@ -41,7 +41,7 @@ const AnalogClock: React.FC = () => {
                 transform: `rotate(${i * 30}deg) translateY(-40px) rotate(-${i * 30}deg)` 
               }}
             >
-              {i === 0 ? 12 : i}
+              {/* Removed the numbers here */}
             </div>
           ))}
           
